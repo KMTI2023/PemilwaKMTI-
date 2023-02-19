@@ -2,4 +2,3 @@
 # sudo apt install libsqlite3-dev
 pip install -r requirements.txt
 python3.9 manage.py collectstatic
-y

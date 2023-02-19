@@ -42,8 +42,12 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'voting.apps.VotingConfig',
     'administrator.apps.AdministratorConfig',
-]
 
+    'django_cleanup.apps.CleanupConfig',
+    "whitenoise.runserver_nostatic",
+
+]
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'account.middleware.AccountCheckMiddleWare',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'e_voting.urls'

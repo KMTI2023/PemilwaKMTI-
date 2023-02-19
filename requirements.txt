@@ -1,6 +1,6 @@
 Django
 Pillow
-django-renderpdf
+# django-renderpdf
 requests
 
 asgiref==3.5.2

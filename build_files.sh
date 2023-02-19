@@ -1,4 +1,4 @@
 # build_files.sh
-sudo apt install libsqlite3-dev
+# sudo apt install libsqlite3-dev
 pip install -r requirements.txt
-python3.9 manage.py collectstatic
+# python3.9 manage.py collectstatic

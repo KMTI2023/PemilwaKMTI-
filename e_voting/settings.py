@@ -25,7 +25,7 @@ SECRET_KEY = '%6lp_p!%r$7t-2ql5hc5(r@)8u_fc+6@ugxcnz=h=b(fn#3$p9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".vercel.app",".supabase.co",'db.ilmygstqgcyitlgsnxbd.supabase.co','127.0.0.1']
 
 
 # Application definition
@@ -81,13 +81,34 @@ WSGI_APPLICATION = 'e_voting.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    #   You can use this :
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
 
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'neondb',
+    'USER': 'KMTI2023',
+    'PASSWORD': 'NoO3CymbEa9W',
+    'HOST': 'ep-billowing-violet-524988.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+  }
+}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME':'postgres',
+#         'USER':'postgres', 
+#         'PASSWORD':'pemilwakmti2023',
+#         'HOST':'db.ilmygstqgcyitlgsnxbd.supabase.co',
+#         'PORT':'5432',
+        
+#     }}
+# DATABASES = {
+#     #   You can use this :
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }}
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'e_voting',
@@ -95,7 +116,7 @@ DATABASES = {
     #     'USER': 'root',
     #     'PASSWORD': ''
     # }
-}
+# }
 
 
 # Password validation

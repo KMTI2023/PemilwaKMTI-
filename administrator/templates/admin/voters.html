@@ -27,7 +27,7 @@
       <td>{{ voter.phone }}</td>
       
       <td>
-        <button class='btn btn-primary btn-sm edit btn-flat' data-id='{{ voter.id }}'><i class='fa fa-edit'></i> Edit</button>
+        <button class='btn btn-primary btn-sm edit btn-flat' data-toggle="modal" data-id='{{ voter.id }}'><i class='fa fa-edit'></i> Edit</button>
         <button class='btn btn-danger btn-sm delete btn-flat' data-id='{{ voter.id }}'><i class='fa fa-trash'></i> Delete</button>
       </td>
     </tr>
@@ -173,6 +173,8 @@
           $('#edit').modal('show');
           var id = $(this).data('id');
           getRow(id);
+          console.log(id)
+          console.log(getRow(id))
       });
 
       $(document).on('click', '.delete', function(e) {
